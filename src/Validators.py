@@ -66,7 +66,7 @@ def validate_token_expiration(token_data, user_pool_id):
 
 
 # Method validates if user associated groups is authorized on a specific route #
-def validate_user_in_groups(jwt_user_groups, groups):
-    if jwt_user_groups is None or groups is None:
-        return True
-    return next((True for group in jwt_user_groups if group in groups), False)
+def validate_user_in_groups(user_groups, decorator_groups):
+    if user_groups is None:
+        return True if decorator_groups == '' else False
+    return next((True for group in user_groups if group in decorator_groups), False)
