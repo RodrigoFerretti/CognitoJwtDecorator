@@ -6,6 +6,7 @@ It takes 2 arguments, one is a string containing cognito groups separated by com
 
 Example:
 
+```python
 # save this as app.py
 from flask import Flask
 
@@ -17,3 +18,4 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello, World!"
+```
