@@ -24,6 +24,7 @@ def hello():
 
 The 4 possible responses for this example would be:
 
+1: Invalid Access Token
 ```json
 {
     "statusCode": 403,
@@ -31,30 +32,30 @@ The 4 possible responses for this example would be:
         "ErrorMessage": "Invalid Access Token"
     }
 }
+```
 
-
-
-
-
+2: Group in groups not allowed on route
+```json
 {
     "statusCode": 403,
     "body": {
         "ErrorMessage": "The groups you belong to are not allowed on this route"
     }
 }
+```
 
-
-
+3: Acess Token Expired
+```json
 {
     "statusCode": 403,
     "body": {
         "ErrorMessage": "Access Token has expired"
     }
 }
+```
 
-
-
-
+4: Success
+```json
 {
     "statusCode": 200,
     "body": "Hello, World!"
