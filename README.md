@@ -14,7 +14,7 @@ from CognitoJwtDecorator.CognitoDecorator import token_required
 
 app = Flask(__name__)
 
-@token_required('admin', 'cognito_pool_id_example')
+@token_required('admin, read', 'cognito_pool_id_example')
 @app.route("/")
 def hello():
     return "Hello, World!"
